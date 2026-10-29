@@ -17,6 +17,7 @@ print('GTK4 and libadwaita: available')
 PY
 mkdir -p "$APP_DIR/taskbell" "$DESKTOP_DIR" "$AUTOSTART_DIR"
 install -m 644 "$SOURCE_DIR/taskbell/__init__.py" "$APP_DIR/taskbell/__init__.py"
+install -m 644 "$SOURCE_DIR/taskbell/history_layout.py" "$APP_DIR/taskbell/history_layout.py"
 install -m 644 "$SOURCE_DIR/taskbell/store.py" "$APP_DIR/taskbell/store.py"
 install -m 644 "$SOURCE_DIR/taskbell/reminders.py" "$APP_DIR/taskbell/reminders.py"
 install -m 644 "$SOURCE_DIR/taskbell/ui.py" "$APP_DIR/taskbell/ui.py"

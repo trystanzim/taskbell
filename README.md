@@ -46,3 +46,18 @@ Closing the window hides it without losing tasks. On the next application startu
 ## Source and license
 
 Original Python source, licensed MIT (see LICENSE). Built with open-source Python 3, GTK4, libadwaita and SQLite. Open-source applications referenced as design/background examples, with **no code copied**: [Planify](https://github.com/alainm23/planify), [GNOME Reminders](https://github.com/remindersdevs/Reminders), and [KAlarm](https://invent.kde.org/pim/kalarm). The GitHub repository may be private while code remains locally licensed as MIT.
+
+## Done history (v1.1)
+
+Marking a one-time task complete moves it from **To Do** to **Done**; the
+original task and a dated completion snapshot remain in local SQLite storage.
+The Done tab offers **Day** and **Month** views, previous/next navigation,
+Today, and a clickable month grid with counts per day. A completed one-time
+task has a **Restore** button to return it to To Do.
+
+For recurring tasks, each *actual* completion is recorded in Done, and the
+next reminder stays in To Do. Missed days do not create fake completion
+history, and deleting a recurring task leaves its completed work in Done.
+Existing databases are upgraded without deleting any tasks; any tasks
+completed before this feature existed are labeled as imported, since the
+old database did not record the original completion date.
